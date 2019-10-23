@@ -1,4 +1,4 @@
-package com.demoareaperimetro;
+package com.demoareaperimetro.controllers;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/prueba")
-public class Prueba {
+@RequestMapping("/area-perimetro")
+public class AreaPerimetroController {
 	
 	@GetMapping("")
 	public ResponseEntity<String> hola() {
@@ -17,9 +17,9 @@ public class Prueba {
 		return new ResponseEntity<String>("Hola mundo",HttpStatus.OK);
 	}
 	
-	@GetMapping("/e")
+	@GetMapping("/rectangulo")
 	public ModelAndView capturaOperario() {
-		ModelAndView mv = new ModelAndView("/capturaoperarios");
+		ModelAndView mv = new ModelAndView("/capturadatos");
 		return mv;
 	}
 
